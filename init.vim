@@ -17,7 +17,7 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
-
+" -----------------Plugins-------------------------------------------------------
 call plug#begin()
  Plug 'ryanoasis/vim-devicons'
  Plug 'SirVer/ultisnips'
@@ -26,7 +26,15 @@ call plug#begin()
  Plug 'preservim/nerdcommenter'
  Plug 'mhinz/vim-startify'
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+ Plug 'junegunn/fzf.vim'
+ Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
+ Plug 'leafgarland/typescript-vim'
+ Plug 'peitalin/vim-jsx-typescript'
 call plug#end()
+
+" ------------------------------------------------------------------------------
 
 " open new split panes to right and below
 set splitright
@@ -63,6 +71,18 @@ endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
 " -------------------------------------------------------------------------------
+
+" ----------------File Searching( Ctrl + P, then Ctrl + S or Ctrl + T )-------
+
+nnoremap <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+" ----------------------------------------------------------------------------
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " move line or visually selected block - alt+j/k
 inoremap <A-j> <Esc>:m .+1<CR>==gi
