@@ -18,6 +18,7 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " -----------------Plugins-------------------------------------------------------
 call plug#begin()
+ Plug 'pocco81/auto-save.nvim'
  Plug 'ryanoasis/vim-devicons'
  Plug 'SirVer/ultisnips'
  Plug 'honza/vim-snippets'
