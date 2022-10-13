@@ -18,7 +18,7 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " -----------------Plugins-------------------------------------------------------
 call plug#begin()
- Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+ Plug 'neovim/nvim-lspcnofig'
  Plug 'pocco81/auto-save.nvim'
  Plug 'ryanoasis/vim-devicons'
  Plug 'SirVer/ultisnips'
@@ -126,4 +126,3 @@ au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
 " Color scheme 
-colorscheme tokyonight-storm
