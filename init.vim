@@ -3,6 +3,7 @@ set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with set hlsearch                " highlight search 
+set nohlsearch 
 set incsearch               " incremental search
 set tabstop=4               " number of columns occupied by a tab set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
 set expandtab               " converts tabs to white space
@@ -18,6 +19,7 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " -----------------Plugins-------------------------------------------------------
 call plug#begin()
+ Plug 'neovim/nvim-lspconfig'
  Plug 'kyazdani42/nvim-web-devicons'
  Plug 'romgrk/barbar.nvim'
  Plug 'pocco81/auto-save.nvim'
