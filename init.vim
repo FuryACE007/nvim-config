@@ -22,6 +22,8 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 " -----------------Plugins-------------------------------------------------------
 call plug#begin()
+ Plug 'nvim-lua/plenary.nvim'
+ Plug 'tjdevries/express_line.nvim'
  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
  Plug 'neovim/nvim-lspconfig'
  Plug 'kyazdani42/nvim-web-devicons'
@@ -181,3 +183,15 @@ end
 EOF
 
 "--------------------------------------------------
+"
+"-------ExpressLine----------------------
+-- require this lua file somewhere in your `init.vim`, or use `:lua`
+
+require('el').setup {
+  -- An example generator can be seen in `Setup`.
+  -- A default one is supplied if you do not want to customize it.
+  generator = function(win_id)
+    ...
+  end
+}
+" ---------------------------------------------
